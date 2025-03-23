@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tink_flutter_proj/screen/onboarding_screen/onboarding_page.dart';
+import 'package:tink_flutter_proj/values/app_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: AppFonts.font,
+      ),
       title: 'Tink Offer: Business Assistant',
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const OnboardingPage(),
     );
   }
 }
