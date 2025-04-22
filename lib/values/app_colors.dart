@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 mixin AppColors {
+  static const black =  Color(0xFF181818);
   static const dark =  Color(0xFF1E1E1E);
   static const grey =  Color(0xFF2C2C2C);
   static const yellow =  Color(0xFFFFD60A);

@@ -16,21 +16,21 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         children: [
           Container(
             color: AppColors.dark,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 152,
                 ),
                 Center(
                   child: RichText(
                     text: TextSpan(
                       children: [
-                        TextSpan(
+                        const TextSpan(
                           text: 'Welcome to\n',
                           style: TextStyle(
                             color: AppColors.white,
@@ -38,7 +38,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: 'Tink Offer:\n',
                           style: TextStyle(
                             color: AppColors.yellow,
@@ -46,7 +46,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: 'Business Assistant!\n',
                           style: TextStyle(
                             color: AppColors.yellow,
@@ -54,7 +54,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: '\n',
                         ),
                         TextSpan(
@@ -77,11 +77,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                   ),
                 ),
-                Spacer(),
+                const SizedBox(height: 10,),
                 Stack(
+                  clipBehavior: Clip.none,
                   children: [
                     Image.asset(
-                      AppImages.onBoardingPage1Img2,
+                      AppImages.onBoardingPage1Img1,
                       fit: BoxFit.cover,
                     ),
                     Positioned(
@@ -100,7 +101,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Container(
@@ -115,7 +116,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       ),
                     ),
                     Positioned(
-                      bottom: 45,
+                      bottom: 100,
                       left: 0,
                       right: 0,
                       child: GestureDetector(
@@ -130,8 +131,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 color: AppColors.yellow,
                                 borderRadius: BorderRadius.circular(100)),
                             alignment: Alignment.center,
-                            padding: EdgeInsets.all(8),
-                            child: Text(
+                            padding: const EdgeInsets.all(8),
+                            child: const Text(
                               'Continue',
                               style: TextStyle(
                                 fontSize: 24,
@@ -152,7 +153,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             color: AppColors.dark,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 132,
                 ),
                 Center(
@@ -165,7 +166,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         border: Border.all(
                           color: AppColors.yellow,
                         )),
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: Row(
                       children: [
                         Column(
@@ -176,14 +177,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Salaries',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -192,7 +193,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Row(
@@ -200,14 +201,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Tenders',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -216,7 +217,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Row(
@@ -224,14 +225,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Meetings',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -240,7 +241,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Row(
@@ -248,14 +249,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Secure Data',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -266,7 +267,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                         Column(
@@ -277,14 +278,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Loans',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -293,7 +294,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Row(
@@ -301,14 +302,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Debts',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -317,7 +318,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Row(
@@ -325,14 +326,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Events',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -341,7 +342,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Row(
@@ -349,14 +350,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: AppColors.yellow,
                                       shape: BoxShape.circle),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Leases',
                                   style: TextStyle(
                                       color: AppColors.white,
@@ -371,7 +372,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Stack(
                   children: [
                     Image.asset(
@@ -393,7 +394,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                   color: AppColors.white.withOpacity(0.5),
                                   shape: BoxShape.circle),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Container(
@@ -415,7 +416,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.pushReplacement(context,
-                           MaterialPageRoute(builder: (context) => AppMainScreen()),
+                           MaterialPageRoute(builder: (context) => const AppMainScreen()),
                            );
                         },
                         child: Center(
@@ -426,8 +427,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 color: AppColors.yellow,
                                 borderRadius: BorderRadius.circular(100)),
                             alignment: Alignment.center,
-                            padding: EdgeInsets.all(8),
-                            child: Text(
+                            padding: const EdgeInsets.all(8),
+                            child: const Text(
                               'Start',
                               style: TextStyle(
                                 fontSize: 24,
